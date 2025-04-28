@@ -1,16 +1,16 @@
 # Replace the "ANSWER HERE" with your answer
 
 def remove_elements(list_to_remove_elements):
-	del list_to_remove_elements[0]
-	del list_to_remove_elements[4]
-	del list_to_remove_elements[5]
-	return list_to_remove_elements
+	x = del list_to_remove_elements[0]
+	y = del x[4]
+	z = del y[5]
+	return z
 
 def add_elements(list_to_add_elements):
-	list_to_add_elements.insert(0, "pink")
-	list_to_add_elements.append("yellow")
-	return list_to_add_elements
-
+	x = list_to_add_elements.insert(0, "pink")
+	y = x.append("yellow")
+	return y
+	
 def is_empty(list_to_check):
 	if list_to_check == []:
 		rta = "True"
@@ -25,7 +25,7 @@ def check_lists(list_to_compare1, list_to_compare2):
 		rta = "False"
 
 def list_of_lists(list_of_lists_to_modify):
-	list_of_lists_to_modify[0][0:2]
-	list_of_lists_to_modify[1][1:4]
-	list_of_lists_to_modify[3][0:2:-1]
-	return f
+	x = list_of_lists_to_modify[0][0:2]
+	y = x[1][1:4]
+	z = y[3][0:2:-1]
+	return z
