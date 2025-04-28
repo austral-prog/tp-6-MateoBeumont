@@ -20,5 +20,5 @@ def check_lists(list_to_compare1, list_to_compare2):
 def list_of_lists(list_of_lists_to_modify):
 	x = list_of_lists_to_modify[0][0:2]
 	y = x[1][1:4]
-	z = y[2][0:2:-1]
+	z = y[2][-2:]
 	return z
