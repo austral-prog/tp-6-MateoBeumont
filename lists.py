@@ -1,9 +1,9 @@
 # Replace the "ANSWER HERE" with your answer
 
 def remove_elements(list_to_remove_elements):
-	x = del list_to_remove_elements[0]
+	x = del list_to_remove_elements[5]
 	y = del x[4]
-	z = del y[5]
+	z = del y[0]
 	return z
 
 def add_elements(list_to_add_elements):
