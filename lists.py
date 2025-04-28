@@ -12,7 +12,7 @@ def add_elements(list_to_add_elements):
 	return list_to_add_elements
 
 def is_empty(list_to_check):
-    if list_to_check == []
+    if list_to_check == []:
 		rta = True
 	else:
 		rta = False
