@@ -1,12 +1,8 @@
 # Replace the "ANSWER HERE" with your answer
-
 def remove_elements(list_to_remove_elements):
-	if len(list_to_remove_elements) > 5:
-       		del list_to_remove_elements[5]
-	if len(list_to_remove_elements) > 4:
-        	del list_to_remove_elements[4]
-	if len(list_to_remove_elements) > 0:
-        	del list_to_remove_elements[0]
+	del list_to_remove_elements[5]
+	del list_to_remove_elements[4]
+	del list_to_remove_elements[0]
 	return list_to_remove_elements
 
 def add_elements(list_to_add_elements):
@@ -23,7 +19,7 @@ def check_lists(list_to_compare1, list_to_compare2):
 	return false
 
 def list_of_lists(list_of_lists_to_modify):
-	x = list_of_lists_to_modify[0][0:2]
-	y = x[1][2:4]
-	z = y[2][-2:]
-	return z
+	del list_of_lists_to_modify[0][0:2]
+	del list_of_lists_to_modify[1][1:4]
+	del list_of_lists_to_modify[2][-2:]
+	return list_of_lists_to_modify
