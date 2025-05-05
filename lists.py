@@ -1,15 +1,18 @@
 # Replace the "ANSWER HERE" with your answer
 
 def remove_elements(list_to_remove_elements):
-	x = del list_to_remove_elements[5]
-	y = del x[4]
-	z = del y[0]
-	return z
+	if len(list_to_remove_elements) > 5:
+       		del list_to_remove_elements[5]
+	if len(list_to_remove_elements) > 4:
+        	del list_to_remove_elements[4]
+	if len(list_to_remove_elements) > 0:
+        	del list_to_remove_elements[0]
+	return list_to_remove_elements
 
 def add_elements(list_to_add_elements):
-	x = list_to_add_elements.insert(0, "pink")
-	y = x.append("yellow")
-	return y
+	list_to_add_elements.insert(0, "pink")
+	list_to_add_elements.append("yellow")
+	return list_to_add_elements
 	
 def is_empty(list_to_check):
 	return len(list_to_check) == 0
