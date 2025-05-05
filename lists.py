@@ -9,7 +9,7 @@ def add_elements(list_to_add_elements):
 	list_to_add_elements.insert(0, "pink")
 	list_to_add_elements.append("yellow")
 	return list_to_add_elements
-	
+
 def is_empty(list_to_check):
 	return len(list_to_check) == 0
 		
