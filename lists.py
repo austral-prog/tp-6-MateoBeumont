@@ -2,7 +2,7 @@
 def remove_elements(lista):
     for i in sorted([5, 4, 0], reverse=True):
         if i < len(lista):
-         del lista[i]
+        del lista[i]
     return lista
 
 def add_elements(list_to_add_elements):
@@ -19,7 +19,7 @@ def is_empty(list_to_check):
 def check_lists(list_to_compare1, list_to_compare2):
     if len(list_to_compare1)<3 or len(list_to_compare2)<3:
         return False
-    else :
+    else:
         if list_to_compare1[2] == list_to_compare2[2]:
             return True
         else:
@@ -30,7 +30,7 @@ def list_of_lists(list_of_lists_to_modify):
         paso_3 = list_of_lists_to_modify[0]
     else:
         paso_3 = list_of_lists_to_modify[0][0:2]
-
+        
     if len(list_of_lists_to_modify[1]) < 5:
         if len(list_of_lists_to_modify[1]) >= 2:
             paso_2 = list_of_lists_to_modify[1][1:]
@@ -39,9 +39,9 @@ def list_of_lists(list_of_lists_to_modify):
     else:
         paso_2 = list_of_lists_to_modify[1][1:4]
 
-    if len(list_of_lists_to_modify[2]) < 3:
+if len(list_of_lists_to_modify[2]) < 3:
         paso_1 = list_of_lists_to_modify[2]
     else:
         paso_1 = list_of_lists_to_modify[2][-2:]
-
+        
     return [paso_3, paso_2, paso_1]
