@@ -1,47 +1,30 @@
 # Replace the "ANSWER HERE" with your answer
-def remove_elements(lista):
-    for i in sorted([5, 4, 0], reverse=True):
-        if i < len(lista):
-        del lista[i]
-    return lista
+def remove_elements(lst):
+    indices_to_remove = [0, 4, 5]  # primer, quinto y sexto elemento
+    # Crear una nueva lista ignorando los índices a eliminar
+    return [item for idx, item in enumerate(lst) if idx not in indices_to_remove]
 
-def add_elements(list_to_add_elements):
-    list_to_add_elements.insert(0,"Pink")
-    list_to_add_elements.append("Yellow")
-    return list_to_add_elements
+# 2. add_elements
+def add_elements(lst):
+    return ['Pink'] + lst + ['Yellow']
 
-def is_empty(list_to_check):
-    if len(list_to_check) == 0:
-        return True
-    else:
-        return False
+# 3. is_empty
+def is_empty(lst):
+    return len(lst) == 0
 
-def check_lists(list_to_compare1, list_to_compare2):
-    if len(list_to_compare1)<3 or len(list_to_compare2)<3:
-        return False
-    else:
-        if list_to_compare1[2] == list_to_compare2[2]:
-            return True
-        else:
-            return False
+# 4. check_lists
+def check_lists(lst1, lst2):
+    if len(lst1) >= 3 and len(lst2) >= 3:
+        return lst1[2] == lst2[2]
+    return False
 
-def list_of_lists(list_of_lists_to_modify):
-    if len(list_of_lists_to_modify[0]) < 3:
-        paso_3 = list_of_lists_to_modify[0]
-    else:
-        paso_3 = list_of_lists_to_modify[0][0:2]
-        
-    if len(list_of_lists_to_modify[1]) < 5:
-        if len(list_of_lists_to_modify[1]) >= 2:
-            paso_2 = list_of_lists_to_modify[1][1:]
-        else:
-            paso_2 = []
-    else:
-        paso_2 = list_of_lists_to_modify[1][1:4]
-
-if len(list_of_lists_to_modify[2]) < 3:
-        paso_1 = list_of_lists_to_modify[2]
-    else:
-        paso_1 = list_of_lists_to_modify[2][-2:]
-        
-    return [paso_3, paso_2, paso_1]
+# 5. list_of_lists
+def list_of_lists(lst):
+    result = []
+    if len(lst) >= 1:
+        result.append(lst[0][:2])
+    if len(lst) >= 2:
+        result.append(lst[1][1:4])
+    if len(lst) >= 3:
+        result.append(lst[2][-2:])
+    return result
