@@ -19,7 +19,22 @@ def check_lists(list_to_compare1, list_to_compare2):
 	return false
 
 def list_of_lists(list_of_lists_to_modify):
-	del list_of_lists_to_modify[0][0:2]
-	del list_of_lists_to_modify[1][1:4]
-	del list_of_lists_to_modify[2][-2:]
-	return list_of_lists_to_modify
+    if len(list_of_lists_to_modify[0]) < 3:
+        paso_3 = list_of_lists_to_modify[0]
+    else:
+        paso_3 = list_of_lists_to_modify[0][0:2]
+
+    if len(list_of_lists_to_modify[1]) < 5:
+        if len(list_of_lists_to_modify[1]) >= 2:
+            paso_2 = list_of_lists_to_modify[1][1:]
+        else:
+            paso_2 = []
+    else:
+        paso_2 = list_of_lists_to_modify[1][1:4]
+
+    if len(list_of_lists_to_modify[2]) < 3:
+        paso_1 = list_of_lists_to_modify[2]
+    else:
+        paso_1 = list_of_lists_to_modify[2][-2:]
+
+    return [paso_3, paso_2, paso_1]
